@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "64ab4ac0a7abe47de3f5824b"
+  },
+  "firstname": "hgfj",
+  "lastname": "ghfj",
+  "phoneNumber": "+3816540372346",
+  "email": "lcvijanasdf@gmail.com",
+  "specialization": "kuce",
+  "agencyUnder": "real_madrid",
+  "__v": 0
+}]

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <h2 class="card-header text-center">Login</h2>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required [(ngModel)]="username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required [(ngModel)]="password">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" (click)="login()">Login</button>
+            </form>
+            <div class="error-message">
+                {{message}}
+            </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-secondary" (click)="goAsGuest()" >Login as Guest</button>
+            </div>
+            <div class="text-center mt-3">
+              <p>Don't have an account? <a routerLink="/register">Register</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

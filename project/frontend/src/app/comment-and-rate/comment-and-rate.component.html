@@ -1,0 +1,80 @@
+
+<div *ngIf="commented == false">
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <button class="btn btn-secondary back-button" (click)="back()">Back</button>
+                    <h2 class="text-center" style="margin-right: 60px;">Write Comment</h2>
+                  </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="text">Text</label>
+                    <input type="text" id="text" name="text" class="form-control" required [(ngModel)]="text">
+                  </div>
+                  <div class="form-group" class="custom-select">
+                    <label for="rating">Rating</label>
+                    <select name="type" class="form-control" [(ngModel)]="rating" required> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="form-group comment-button">
+                        <button type="submit" class="btn btn-primary btn-block" (click)="addComment()">Comment</button>
+                  </div>        
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div *ngIf="commented == true">
+    <div class="container">
+        <h1 class="text-center">Your Comment</h1>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-text">Text: {{comment.text}}</h5>
+            <h5 class="card-text">Rating: {{comment.rating}}</h5>
+            <button class="btn btn-outline-danger" (click)="deleteComment()">Delete Comment</button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <button class="btn btn-secondary back-button" (click)="back()">Back</button>
+                    <h2 class="text-center" style="margin-right: 60px;">Change Comment</h2>
+                  </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="text">Text</label>
+                    <input type="text" id="text" name="text" class="form-control" required [(ngModel)]="text">
+                  </div>
+                  <div class="form-group" class="custom-select">
+                    <label for="rating">Rating</label>
+                    <select name="type" class="form-control" [(ngModel)]="rating" required> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="form-group comment-button">
+                        <button type="submit" class="btn btn-primary btn-block" (click)="changeComment()">Change</button>
+                  </div>        
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div> 

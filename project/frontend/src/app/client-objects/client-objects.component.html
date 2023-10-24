@@ -1,0 +1,42 @@
+<div class="container">
+    <h1 class="text-center">Object List</h1>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>
+                Type
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Number Of Rooms
+            </th>
+            <th>
+               Square footage
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let object of user.objects">
+          <td scope="row">{{object.type}}</td>
+          <td>{{object.address}}</td>
+          <td>{{object.numberOfRooms}}</td>
+          <td>{{object.squareF}}</td>
+          <td>
+            <button class="btn btn-outline-warning" (click)="preview(object)">Preview</button>
+            <button class="btn btn-outline-danger" (click)="delete(object)">Delete</button>
+          </td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+    <div class="button-container">
+      <button class="btn btn-secondary" (click)="back()">Back</button>
+      <button class="btn btn-success" (click)="addObject()">Add Object</button>
+      <button class="btn btn-primary" (click)="logout()">Logout</button>
+    </div>
+  </div>

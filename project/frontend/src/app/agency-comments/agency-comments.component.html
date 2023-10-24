@@ -1,0 +1,41 @@
+<div class="container">
+    <h1 class="text-center">Object List</h1>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>
+                Text
+            </th>
+            <th>
+                Rating
+            </th>
+            <div *ngIf="userFlag == true">
+                <th>
+                    User
+                </th>
+            </div>       
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let comment  of agency.comments">
+          <td>
+            {{comment.text}}
+            </td>
+            <td>
+            {{comment.rating}}
+            </td>
+            <div *ngIf="userFlag == true">
+                <td>
+                    {{comment.username}}
+                </td>   
+            </div>
+        </tr>
+      </tbody>
+    </table>
+    <div class="button-container">
+      <button class="btn btn-secondary" (click)="back()">Back</button>
+      <div *ngIf="userFlag == true">
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>

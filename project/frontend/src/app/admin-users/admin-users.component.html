@@ -1,0 +1,56 @@
+<div class="container">
+    <h1 class="text-center">Users</h1>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Update/Delete
+            </th>
+            <th>
+                Accept User
+            </th>
+            <th>
+              Workers
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+            <td>
+                {{user.username}}
+            </td>
+            <td>
+                {{user.type}}
+            </td>
+          <td>
+            <div *ngIf="user.approved == 1">
+              <button class="btn btn-outline-success" (click)="update(user)">Update</button>             
+              <button class="btn btn-outline-danger" (click)="delete(user.username)">Delete</button>
+            </div>  
+          </td>
+          <td>
+            <div *ngIf="user.approved == 0">
+                <button class="btn btn-success" (click)="accept(user.username)">Accept</button>                
+                <button class="btn btn-danger" (click)="decline(user.username)">Decline</button>
+            </div>
+        </td>
+        <td>
+          <div *ngIf="user.approved == 1 && user.type== 'agency'">
+              <button class="btn btn-outline-warning" (click)="workers(user.username)">Workers</button>
+          </div>
+      </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="button-container">
+      <button class="btn btn-secondary" (click)="back()">Back</button>
+      <button class="btn btn-warning" (click)="addUser()">Add User</button>
+      <button class="btn btn-primary" (click)="logout()">Logout</button>
+    </div>
+  </div>

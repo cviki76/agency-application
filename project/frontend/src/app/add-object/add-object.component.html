@@ -1,0 +1,38 @@
+<div class="container custom-container">
+    <div class="row">
+      <div class="col-6">
+        <h2>Object Projection</h2>
+      </div>
+      <div class="col-6">
+        <h2>Object Preview</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <canvas #canvas2 style="border: 1px solid" width="{{canvasWidth}}" height="{{canvasHeight}}"></canvas>
+      </div>
+      <div class="col-6">
+        <canvas #canvas1 style="border: 1px solid" width="{{canvasWidth}}" height="{{canvasHeight}}"></canvas>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mt-2">
+            <button class="btn btn-secondary" (click)="back()">Back</button>
+        </div>
+        <div class="col-6 mt-2">
+            <button class="btn btn-outline-primary" (click)="clear()">Clear</button>
+        </div>
+    </div>
+    <div class="row">
+          <div class="col-6 mt-2">
+            <button class="btn btn-primary" (click)="logout()">Log out</button>
+          </div>
+          <div *ngIf="done" class="col-6 mt-2">
+            <button class="btn btn-outline-success" (click)="doneF()">Done</button>
+         </div>
+    </div>
+     <div class="row-12">
+        {{message}}
+     </div>
+    
+  </div>

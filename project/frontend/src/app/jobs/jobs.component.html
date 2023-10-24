@@ -1,0 +1,67 @@
+<div class="container">
+    <h1 class="text-center">Agencies</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="filterJobs" class="form-label">Filter:</label>
+            <select name="filterBy" class="custom-select" [(ngModel)]="filterBy">
+                <option value="all"></option>
+                <option value="request">Requests for cooperation</option>
+                <option value="active">Active jobs</option>
+                <option value="finished">Finished Jobs</option>
+            </select>
+        </div>
+    </div>
+    <table class="table">
+        
+            <tr>
+                <th>
+                    Agency
+                </th>
+                <th>
+                    Time Period
+                </th>
+                <th colspan="2">
+
+                </th>
+            </tr>
+        
+        
+            <tr *ngFor="let job of jobs" [class.red]="job.status === 'declined'" [class.green]="job.status === 'accepted'">
+                <td>
+                    {{job.agencyUsername}}
+                </td >
+                <td>
+                    {{job.timePeriod}}
+                </td>
+                <td *ngIf="job.status === 'active' || job.status === 'finished'">
+                    <button class="btn btn-outline-warning" (click)="preview(job.objectAddress)">Preview</button>
+                </td>
+                <td *ngIf="job.status === 'active' || job.status === 'finished'">
+                    Bid: {{job.bid}}
+                </td>
+                <td *ngIf="job.status === 'accepted'">
+                    <button class="btn btn-outline-success" (click)="acceptBid(job.agencyUsername,job.objectAddress)">Accept Bid</button>
+                </td>
+                <td *ngIf="job.status === 'accepted'">
+                    Bid: {{job.bid}}
+                </td>
+                <td *ngIf="job.status === 'accepted'">
+                    <button class="btn btn-outline-danger" (click)="declineBid(job.agencyUsername,job.objectAddress)">Decline Bid</button>
+                </td>
+                <td *ngIf="job.status === 'waiting' || job.status === 'accepted' || job.status === 'declined'">
+                    <button class="btn btn-outline-warning" (click)="preview(job.objectAddress)">Preview</button>
+                </td>
+                <td *ngIf="job.status === 'declined'">
+                    <button class="btn btn-outline-info" (click)="declineBid(job.agencyUsername,job.objectAddress)">Ok</button>
+                </td>
+                <td *ngIf="job.status === 'finished'">
+                    <button class="btn btn-outline-info" (click)="commentAandRate(job.agencyUsername)">Add/Change Comment</button>
+                </td>
+            </tr>
+    </table>
+    <div class="button-container">
+        <button class="btn btn-secondary" (click)="back()">Back</button>
+        <button class="btn btn-success" (click)="filter()">Filter</button>
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+    </div>
+</div>

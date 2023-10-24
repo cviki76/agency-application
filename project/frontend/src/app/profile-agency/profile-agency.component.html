@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="text-center">Agency Information</h1>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-text">Agency Name: {{user.agencyName}}</h5>
+        <h5 class="card-text">Address: {{user.address}}</h5>
+        <h5 class="card-text">Description: {{user.description}}</h5>
+        <h5 class="card-text">E-mail: {{user.email}}</h5>
+        <h5 class="card-text">Phone Number: {{user.phoneNumber}}</h5>
+      </div>
+    </div>
+    <div class="mt-3">
+        <button class="btn btn-secondary back-button float-start" (click)="back()">Back</button>
+        <button class="btn btn-primary logout-button float-end" (click)="logout()">Logout</button>
+    </div>
+</div>

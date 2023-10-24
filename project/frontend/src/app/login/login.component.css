@@ -1,0 +1,30 @@
+.container {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+  
+h2 {
+    text-align: center;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+label {
+    display: block;
+    font-weight: bold;
+}
+  
+.guest-login,
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+

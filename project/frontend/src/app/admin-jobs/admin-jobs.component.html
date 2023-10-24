@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="text-center">Jobs</h1>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>
+                Client Username
+            </th>
+            <th>
+                Agency Username
+            </th>
+            <th>
+                Preview
+            </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let job of jobs">
+            <td>
+                {{job.clientUsername}}
+            </td>
+            <td>
+                {{job.agencyUsername}}
+            </td>
+          <td>
+            <button class="btn btn-outline-warning" (click)="preview(job.clientUsername,job.objectAddress)">Preview</button>     
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="button-container">
+      <button class="btn btn-secondary" (click)="back()">Back</button>
+      <button class="btn btn-primary" (click)="logout()">Logout</button>
+    </div>
+  </div>

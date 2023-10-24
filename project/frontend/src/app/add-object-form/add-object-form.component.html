@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-secondary back-button" (click)="back()">Back</button>
+                <h2 class="text-center" style="margin-right: 60px;">Add Object</h2>
+              </div>
+          <div class="card-body">
+            <form>                       
+                <div class="form-group">
+                    <label for="jsonFile">JSON File</label>
+                    <input type="file" class="form-control" (change)="onFileSelected($event)" accept=".json">
+                </div>
+                <div class="form-group json-button">
+                    <button type="submit" class="btn btn-primary btn-block" (click)="addJSON()">Add Object As JSON</button>
+                </div>
+                <div class="form-group" class="custom-select">
+                    <label for="type">Object Type</label>
+                    <select name="type" class="form-control" [(ngModel)]="type"> 
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="objectAddress">Object Address</label>
+                    <input type="text" id="address" name="address" class="form-control" required [(ngModel)]="address">
+                </div>
+                <div class="form-group" class="custom-select">
+                    <label for="numberOfRooms">Number Of Rooms</label>
+                    <select name="numberOfRooms" class="form-control" [(ngModel)]="numberOfRooms"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="squareFt">Square footage</label>
+                    <input type="text" id="squareFt" name="squareFt" class="form-control" required [(ngModel)]="squareFt">
+                </div>
+                <div class="form-group">
+                    <table>
+                        <div *ngIf="flag == 1">
+                            <tr *ngFor = 'let roomN of rooms'>        
+                                <td>Room {{roomN}}:</td>
+                                <td>
+                                    <input type="text" id="width{{roomN}}"  name="width{{roomN}}" placeholder="Width" class="form-control" required [(ngModel)]="width[roomN - 1]">
+                                </td>
+                                <td>
+                                    <input type="text" id="height{{roomN}}"  name="height{{roomN}}" placeholder="Height" class="form-control" required [(ngModel)]="height[roomN - 1]">
+                                </td>
+                            
+                            </tr>
+                        </div>
+                    </table> 
+                </div>
+                <div class="form-group json-button">
+                        <button type="submit" class="btn btn-primary btn-block" (click)="create()">Create</button>
+                </div>         
+              <div class="error-message">
+                {{message}}
+            </div>     
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

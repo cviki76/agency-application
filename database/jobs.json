@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "64aaff8a3242efb3987fe545"
+  },
+  "timePeriod": 300,
+  "agencyUsername": "real_madrid",
+  "objectAddress": "Aldea Fernando, 49 Puerta 482, Puerta 452, 72704, Torrejón de Ardoz, Castilla-La Mancha, Spain",
+  "clientUsername": "pera",
+  "status": "finished",
+  "__v": 0,
+  "bid": "1500"
+},
+{
+  "_id": {
+    "$oid": "64aaffc83242efb3987fe554"
+  },
+  "timePeriod": 150,
+  "agencyUsername": "manchester_united",
+  "objectAddress": "957 Ellen Dale, Apt. 243, ZF38 0IP, New Suzanne, Massachusetts, Great Britain",
+  "clientUsername": "mika",
+  "status": "waiting",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaffd13242efb3987fe558"
+  },
+  "timePeriod": 100,
+  "agencyUsername": "barcelona",
+  "objectAddress": "Carretera Tomás Sauceda s/n. Puerta 502, Esc. 033, 19510, Barcelona, Baleares, Spain",
+  "clientUsername": "mika",
+  "status": "declined",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aafff23242efb3987fe561"
+  },
+  "timePeriod": 120,
+  "agencyUsername": "bayern",
+  "objectAddress": "Gierener Weg 6, Apt. 535, 67903, Alt Annabelscheid, Saarland, Germany",
+  "clientUsername": "sara",
+  "status": "accepted",
+  "__v": 0,
+  "bid": "800"
+},
+{
+  "_id": {
+    "$oid": "64ab00003242efb3987fe565"
+  },
+  "timePeriod": 110,
+  "agencyUsername": "manchester_united",
+  "objectAddress": "5975 Myrtice Locks, Apt. 053, EU2 8ZB, Torpbury, Alabama, Great Britain",
+  "clientUsername": "sara",
+  "status": "waiting",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ab000e3242efb3987fe56c"
+  },
+  "timePeriod": 400,
+  "agencyUsername": "barcelona",
+  "objectAddress": "Subida José 9, Esc. 720, 01018, Barcelona, Andalucía, Spain",
+  "clientUsername": "marta",
+  "status": "waiting",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ab00163242efb3987fe570"
+  },
+  "timePeriod": 350,
+  "agencyUsername": "real_madrid",
+  "objectAddress": "Arroyo Ana Delapaz, 1, Puerta 838, 67670, Madrid, Castilla-La Mancha, Spain",
+  "clientUsername": "marta",
+  "status": "active",
+  "__v": 0,
+  "bid": "2000"
+},
+{
+  "_id": {
+    "$oid": "64ab4d9fa7abe47de3f5827c"
+  },
+  "timePeriod": 100,
+  "agencyUsername": "bayern",
+  "objectAddress": "Am Weiher 86c, 6 OG, 29191, Gunkelstadt, Hamburg, Germany",
+  "clientUsername": "pera",
+  "status": "waiting",
+  "__v": 0
+}]
