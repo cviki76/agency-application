@@ -1,2 +1,2 @@
 # Agency-Application
-MEAN Application for booking workers
+MEAN Stack application for booking workers agencies for house work.
